@@ -1,0 +1,28 @@
+
+services:
+  rng:
+    build: ./rng
+    deploy:
+      replicas: 5
+
+  hasher:
+    build: ./hasher
+    deploy:
+      replicas: 5
+
+  webui:
+    build: ./webui
+    ports:
+    - "8000:80"
+    volumes:
+    - "./webui/files/:/files/"
+
+  redis:
+    image: redis
+
+  worker:
+    build: ./worker
+    deploy:
+      replicas: 5
+
+
