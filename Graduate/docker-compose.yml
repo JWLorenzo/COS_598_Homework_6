@@ -2,13 +2,15 @@
 services:
   rng:
     build: ./rng
-    ports:
-    - "8001:80"
+    deploy:
+      replicas: 3
+
 
   hasher:
     build: ./hasher
-    ports:
-    - "8002:80"
+    deploy:
+      replicas: 3
+
 
   webui:
     build: ./webui
@@ -23,5 +25,5 @@ services:
   worker:
     build: ./worker
     deploy:
-      replicas: 5
+      replicas: 6
 
