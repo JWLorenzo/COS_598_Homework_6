@@ -20,3 +20,5 @@ stop_grad_all:
 restart_basic: stop_basic run_basic
 
 restart_grad: stop_grad run_grad
+
+restart_grad_all: stop_grad_all run_grad_all

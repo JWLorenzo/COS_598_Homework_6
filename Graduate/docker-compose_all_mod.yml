@@ -3,12 +3,12 @@ services:
   rng:
     build: ./rng
     deploy:
-      replicas: 5
+      replicas: 18
 
   hasher:
     build: ./hasher
     deploy:
-      replicas: 5
+      replicas: 18
 
   webui:
     build: ./webui
@@ -23,6 +23,6 @@ services:
   worker:
     build: ./worker
     deploy:
-      replicas: 5
+      replicas: 18
 
 
